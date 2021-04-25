@@ -2,7 +2,6 @@ package com.nilesh.reecetech.addressbook.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,10 +10,7 @@ import java.util.Objects;
 
 @Entity
 @Data
-@Table(name = "addressbook_entry"/*,
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"firstName","lastName"})
-}*/)
+@Table(name = "addressbook_entry")
 public class AddressBookEntry implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
